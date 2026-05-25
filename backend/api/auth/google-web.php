@@ -1,6 +1,6 @@
 <?php
 $clientId    = '369528600881-b6qkj8v1mgnukqrp0gjjhl0ecotqcrv5.apps.googleusercontent.com';
-$callbackUri = 'https://adslife.stss.in/backend/api/auth/google-callback.php';
+$callbackUri = 'https://adslife.in/backend/api/auth/google-callback.php';
 
 // App passes its own deep-link URI (exp:// in Expo Go, com.adslife.app:// in prod)
 $appUri = $_GET['app_uri'] ?? 'com.adslife.app://auth';

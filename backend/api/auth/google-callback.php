@@ -66,7 +66,7 @@
         const abort2 = new AbortController();
         const t2 = setTimeout(() => abort2.abort(), 8000);
 
-        const res = await fetch('https://adslife.stss.in/backend/api/auth/google.php', {
+        const res = await fetch('https://adslife.in/backend/api/auth/google.php', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id_token: accessToken, userinfo: userinfo }),

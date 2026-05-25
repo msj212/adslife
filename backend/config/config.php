@@ -10,8 +10,8 @@ define('JWT_AUDIENCE',  'adslife_users');
 define('JWT_TTL',       86400);
 
 define('APP_ENV',  getenv('APP_ENV') ?: 'development');
-define('APP_URL',      getenv('APP_URL')      ?: 'https://adslife.stss.in/backend');
-define('FRONTEND_URL', getenv('FRONTEND_URL') ?: 'https://adslife.stss.in/');
+define('APP_URL',      getenv('APP_URL')      ?: 'https://adslife.in/backend');
+define('FRONTEND_URL', getenv('FRONTEND_URL') ?: 'https://adslife.in/');
 
 define('MYMEMORY_API', 'https://api.mymemory.translated.net/get');
 define('NOMINATIM_API', 'https://nominatim.openstreetmap.org');

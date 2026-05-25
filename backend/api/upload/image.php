@@ -43,5 +43,5 @@ if (!move_uploaded_file($file['tmp_name'], $dest)) {
 }
 
 require_once __DIR__ . '/../../config/config.php';
-$baseUrl = defined('APP_URL') ? APP_URL : 'https://adslife.stss.in';
+$baseUrl = defined('APP_URL') ? APP_URL : 'https://adslife.in';
 jsonSuccess(['url' => "{$baseUrl}/backend/uploads/vendors/{$filename}"], 'Uploaded');
