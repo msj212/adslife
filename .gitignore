@@ -3,12 +3,18 @@ backend/config/config.php
 backend/config/firebase-service-account.json
 FrontEnd/.env
 
-# Frontend build output
+# Frontend build output (built by deployment script on server)
 FrontEnd/node_modules/
 FrontEnd/dist/
-
-# Frontend build cache
 FrontEnd/.vite/
+
+# Built files deployed to root by deployment script
+/assets/
+/index.html
+/favicon.svg
+/firebase-messaging-sw.js
+/icons.svg
+/sw.js
 
 # Migration scripts (one-time use)
 backend/api/migrate_*.php
