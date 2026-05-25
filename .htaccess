@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+# Pass backend PHP requests through directly
+RewriteRule ^backend/ - [L]
+
+# Serve existing static files from FrontEnd/dist
+RewriteCond %{DOCUMENT_ROOT}/FrontEnd/dist%{REQUEST_URI} -f
+RewriteRule ^(.+)$ FrontEnd/dist/$1 [L]
+
+# All other requests (SPA routes) → React app
+RewriteRule ^ FrontEnd/dist/index.html [L]
