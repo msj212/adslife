@@ -1,3 +1,0 @@
-export function useCoins() {
-  return {};
-}
