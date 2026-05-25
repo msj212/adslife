@@ -1,9 +1,19 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+
 require_once __DIR__ . '/../../middleware/CORS.php';
 require_once __DIR__ . '/../../middleware/Auth.php';
 require_once __DIR__ . '/../../config/database.php';
 
 applyCORS();
+
+set_exception_handler(function(Throwable $e) {
+    http_response_code(500);
+    echo json_encode(['success' => false, 'error' => $e->getMessage(), 'file' => basename($e->getFile()), 'line' => $e->getLine()]);
+    exit;
+});
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') jsonError('Method not allowed', 405);
 
