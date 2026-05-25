@@ -1,0 +1,25 @@
+# Sensitive config – never commit real credentials
+public_html/backend/config/config.php
+public_html/backend/config/firebase-service-account.json
+public_html/FrontEnd/.env
+
+# Frontend build output
+public_html/FrontEnd/node_modules/
+public_html/FrontEnd/dist/
+
+# Frontend build cache
+public_html/FrontEnd/.vite/
+
+# Migration scripts (one-time use)
+public_html/backend/api/migrate_*.php
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# PHP logs
+*.log

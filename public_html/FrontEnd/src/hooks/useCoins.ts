@@ -1,0 +1,3 @@
+export function useCoins() {
+  return {};
+}

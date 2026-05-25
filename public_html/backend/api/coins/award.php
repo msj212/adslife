@@ -1,0 +1,21 @@
+<?php
+require_once __DIR__ . '/../../middleware/CORS.php';
+require_once __DIR__ . '/../../middleware/Auth.php';
+require_once __DIR__ . '/../../services/CoinsService.php';
+
+applyCORS();
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') jsonError('Method not allowed', 405);
+
+$user   = Auth::require();
+$body   = json_decode(file_get_contents('php://input'), true);
+$action = $body['action'] ?? '';
+$uid    = (int)($body['user_id'] ?? $user['user_id']);
+
+if ($uid !== $user['user_id'] && $user['role'] !== 'admin') jsonError('Forbidden', 403);
+
+try {
+    $result = CoinsService::award($uid, $action);
+    jsonSuccess($result);
+} catch (Throwable $e) {
+    jsonError($e->getMessage());
+}
