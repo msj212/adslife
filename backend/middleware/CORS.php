@@ -6,7 +6,7 @@ function applyCORS(): void {
     $allowed = [
         FRONTEND_URL,
         'https://adslife.stss.in',
-        'https://adslife.in',
+        'https://adslife.stss.in',
         'http://localhost:5173',
         'http://localhost:3000',
     ];
