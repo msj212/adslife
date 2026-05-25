@@ -3,7 +3,13 @@ require_once __DIR__ . '/../config/config.php';
 
 function applyCORS(): void {
     $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-    $allowed = [FRONTEND_URL, 'http://localhost:5173', 'http://localhost:3000'];
+    $allowed = [
+        FRONTEND_URL,
+        'https://adslife.stss.in',
+        'https://adslife.in',
+        'http://localhost:5173',
+        'http://localhost:3000',
+    ];
 
     if (in_array($origin, $allowed, true)) {
         header("Access-Control-Allow-Origin: $origin");
