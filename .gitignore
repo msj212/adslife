@@ -1,30 +1,15 @@
-# Sensitive config – never commit real credentials
-backend/config/config.php
-backend/config/firebase-service-account.json
-FrontEnd/.env
-
-# Frontend source – not needed on server (only built output is deployed)
-FrontEnd/
-
-# Frontend build cache (local only)
+# Dependencies
 FrontEnd/node_modules/
-FrontEnd/dist/
-FrontEnd/.vite/
 
-# Migration scripts (one-time use)
-backend/api/migrate_*.php
+# Build output - include dist for deployment
+# FrontEnd/dist/
 
-# Uploaded media
+# Uploads (user-generated content)
+backend/uploads/
 uploads/
 
-# OS / editor
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-.idea/
-.vscode/
-
-# PHP logs
-*.log
+# Misc
+ftp_upload.py
 .claude/
+.vscode/
+*.log
