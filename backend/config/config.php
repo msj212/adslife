@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
-define('DB_NAME', getenv('DB_NAME') ?: 'snh975_abslife');
-define('DB_USER', getenv('DB_USER') ?: 'snh975_abslife');
-define('DB_PASS', getenv('DB_PASS') ?: 'BqhMPqEuAmGM7N4U6Uuh');
+define('DB_HOST', getenv('DB_HOST') ?: 'shareddb-d.hosting.stackcp.net');
+define('DB_NAME', getenv('DB_NAME') ?: 'adslife-3635f36d');
+define('DB_USER', getenv('DB_USER') ?: 'adslife-3635f36d');
+define('DB_PASS', getenv('DB_PASS') ?: 'Jaya91599@');
 
 define('JWT_SECRET',    getenv('JWT_SECRET')    ?: 'adslife_jwt_secret_change_in_production');
 define('JWT_ISSUER',    'adslife.in');
@@ -10,7 +10,7 @@ define('JWT_AUDIENCE',  'adslife_users');
 define('JWT_TTL',       86400);
 
 define('APP_ENV',  getenv('APP_ENV') ?: 'development');
-define('APP_URL',      getenv('APP_URL')      ?: 'https://adslife.in/backend');
+define('APP_URL',      getenv('APP_URL')      ?: 'https://adslifebackend.stss.in');
 define('FRONTEND_URL', getenv('FRONTEND_URL') ?: 'https://adslife.in/');
 
 define('MYMEMORY_API', 'https://api.mymemory.translated.net/get');
